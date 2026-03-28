@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ContextSidebar } from '@/components/copilot/context-sidebar'
 import { Header } from '@/components/copilot/header'
@@ -45,7 +45,7 @@ import {
   toggleMyRoundId,
 } from '@/lib/my-round'
 
-export default function CopilotPage() {
+function CopilotPageContent() {
   const searchParams = useSearchParams()
   const [bootstrap, setBootstrap] = useState<BootstrapPayload>(emptyBootstrap)
   const [selectedMatchId, setSelectedMatchId] = useState<string | null>(null)
@@ -530,5 +530,13 @@ export default function CopilotPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function CopilotPage() {
+  return (
+    <Suspense fallback={<LoadingState />}>
+      <CopilotPageContent />
+    </Suspense>
   )
 }
