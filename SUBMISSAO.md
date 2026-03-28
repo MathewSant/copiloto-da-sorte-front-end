@@ -1,66 +1,73 @@
-# Submissao - Copiloto da Sorte (EDScript 2026)
+# Submissão - Copiloto da Sorte (EDScript 2026)
 
-Este arquivo existe para facilitar a vida da organizacao e da banca: links diretos, o que olhar primeiro e como auditar sem perder tempo.
+Este documento organiza, em leitura rápida, os principais links e o que a banca deve observar primeiro no produto.
 
-## 1) Links (o que a banca precisa abrir)
+## 1. Links principais
 
-### Pitch (obrigatorio)
-- Apresentacao (PDF/PPT): **COLE AQUI**: `LINK_PITCH_PDF_OU_PPT`
+### Apresentação do pitch
+- Pitch dentro do próprio produto: `https://copiloto-da-sorte-front-end.vercel.app/pitch`
 
-### Codigo-fonte (obrigatorio)
-- Repositorio Front-end: **COLE AQUI**: `LINK_REPO_FRONT`
-- Repositorio Back-end (standalone): **COLE AQUI**: `LINK_REPO_BACK`
+### Código-fonte
+- Repositório Front-end: `https://github.com/MathewSant/copiloto-da-sorte-front-end`
+- Repositório Back-end: `https://github.com/MathewSant/copiloto-da-sorte-back-end`
 
-### Ambiente rodando (recomendado)
-- Produto (Vercel): `LINK_VERCEL`
-  - Pitch no sistema: `LINK_VERCEL/pitch`
-  - Demo principal: `LINK_VERCEL/`
-  - Prova objetiva: `LINK_VERCEL/prova`
+### Ambiente consultável
+- Produto: `https://copiloto-da-sorte-front-end.vercel.app/`
+- Pitch no sistema: `https://copiloto-da-sorte-front-end.vercel.app/pitch`
+- Demo principal: `https://copiloto-da-sorte-front-end.vercel.app/`
+- Prova objetiva: `https://copiloto-da-sorte-front-end.vercel.app/prova`
 
-### Design (opcional)
-- Figma: `LINK_FIGMA`
-
----
-
-## 2) O que e o Copiloto da Sorte (em 3 linhas)
-
-O Copiloto da Sorte e uma feature premium de leitura esportiva ao vivo para futebol, integrada ao fluxo de uma sportsbook real.
-Ele nao empurra aposta: ele traduz jogo + mercado em cenarios explicaveis, com mudanca de contexto ao longo do tempo.
-A interface prioriza clareza e decisao: descoberta com microinsights, leitura aprofundada e prova objetiva da consistencia.
+### Vídeo de apoio
+- Vídeo curto da solução: `https://youtu.be/-HZcN4PAiuU`
 
 ---
 
-## 3) O que olhar em 60 segundos (para jurado)
+## 2. O que é o Copiloto da Sorte
 
-1. Abra `LINK_VERCEL/pitch` e avance as 3 telas (atalhos 1/2/3 e setas).
-2. Clique em **Ir para demo** e abra um jogo ao vivo.
-3. Veja, na ordem:
-   - Leitura do Copiloto (topo)
-   - Janela Temporal (o que mudou e por que)
-   - Campo Premium Ao Vivo (pressao + eventos recentes + risco de virada)
-   - Cenarios principais (resultado / gols / momento) com drivers
-4. Abra `LINK_VERCEL/prova` (prova objetiva): coleta, integridade da probabilidade e evolucao de acerto.
+O Copiloto da Sorte é uma feature premium de leitura esportiva ao vivo para futebol, pensada para o contexto de uma sportsbook.
+
+Em vez de mostrar apenas odds, placar e estatísticas soltas, o produto organiza o jogo em leitura clara: o que está acontecendo, o que pode acontecer e por quê.
+
+A experiência combina descoberta de jogos, leitura aprofundada da partida e uma camada de prova objetiva para auditoria.
 
 ---
 
-## 4) O diferencial (explicacao direta)
+## 3. O que olhar primeiro, em 60 segundos
 
-- Em vez de um chatbot solto ou um painel poluido, o produto entrega **leitura explicavel** e **mudanca de cenario**.
-- A lista de jogos ja entrega valor (microinsights) e ajuda a priorizar o que acompanhar.
-- A prova objetiva mostra que a leitura nao e "achismo": existe consistencia matematica e auditoria por checkpoints.
+1. Abra `https://copiloto-da-sorte-front-end.vercel.app/pitch`.
+2. Avance pelas três etapas do pitch dentro do sistema.
+3. Clique em **Ir para demo** e abra uma partida ao vivo.
+4. Observe, na ordem:
+   - leitura do topo;
+   - janela temporal;
+   - campo premium ao vivo;
+   - cenários principais com explicação curta;
+   - perguntas sugeridas do Copiloto.
+5. Abra `https://copiloto-da-sorte-front-end.vercel.app/prova` para validar a camada de auditoria.
 
 ---
 
-## 5) Dados usados (sem aula tecnica)
+## 4. O diferencial do produto
 
-- Live: BetsAPI (status, odds, estatisticas live; XY/Bet365 quando disponivel).
-- Historico/contexto: StatsBomb Open Data (quando cobertura profunda).
-- Jogadores/contexto: FBref (fallback de destaques quando necessario).
+- Não é um chatbot genérico.
+- Não é um painel poluído de números.
+- Não é um palpite seco de aposta.
+
+O produto entrega leitura explicável, mostra mudança de cenário ao longo do tempo e ajuda o usuário a entender melhor o jogo ao vivo.
 
 ---
 
-## 6) Observacoes para auditoria tecnica
+## 5. O que é real e auditável na solução
 
-- Se algum dado nao estiver disponivel para um jogo especifico (ex.: confronto, lineup, XY), a UI mostra isso de forma honesta, sem inventar.
-- O back-end expoe um endpoint de auditoria: `/api/v1/admin/prediction-audit` (visivel na pagina `/prova`).
+- O front-end está disponível publicamente para navegação.
+- O pitch foi incorporado ao próprio sistema, sem depender de apresentação externa.
+- Existe uma página de prova objetiva (`/prova`) dedicada à validação da lógica apresentada.
+- A solução foi construída com dados reais do desafio, respeitando disponibilidade e limitações de cobertura por partida.
 
+---
+
+## 6. Observações para a banca
+
+- Quando algum dado não está disponível para um jogo específico, a interface sinaliza isso com transparência.
+- A solução prioriza clareza de leitura e explicabilidade, não volume bruto de dados.
+- O objetivo central do produto é reduzir ruído e transformar contexto esportivo em entendimento rápido.

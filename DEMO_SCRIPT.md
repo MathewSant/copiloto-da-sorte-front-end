@@ -1,69 +1,80 @@
-# Demo Script (90s) + Plano B
+# Demo Script (90 segundos) + Plano B
 
-Este roteiro e para executar a demo sem improviso. Ele foi escrito para caber em 90 segundos, com frases curtas.
+Este roteiro foi escrito para reduzir improviso na apresentação. A ideia é manter a banca dentro do sistema o máximo possível.
 
-## Setup rapido (antes de entrar)
-- Abra o navegador em `LINK_VERCEL/pitch`.
-- Tenha outro atalho pronto para `LINK_VERCEL/prova` (segunda aba ou favorito).
+## 1. Links que devem estar prontos
 
----
-
-## Demo principal (90 segundos)
-
-### 0:00 -> 0:20 (Pitch dentro do sistema)
-- Na rota `/pitch` (fase 1):
-  "No ao vivo, sobra dado e falta clareza. A gente resolve isso com leitura, nao com barulho."
-
-### 0:20 -> 0:35 (Posicionamento)
-- Avance para fase 2:
-  "Nao e chat, nao e painel, nao e palpite. E leitura explicavel que acompanha mudanca de cenario."
-
-### 0:35 -> 1:10 (Entrar no produto)
-- Clique **Ir para demo**.
-- Na lista, mostre 2 jogos com microinsights.
-  "A lista ja prioriza onde vale prestar atencao."
-
-### 1:10 -> 1:55 (Detalhe do jogo)
-- Abra 1 jogo ao vivo.
-- Mostre rapidamente, na ordem:
-  - **Leitura do Copiloto** (topo)
-  - **Janela Temporal** (o que mudou e por que)
-  - **Campo Premium Ao Vivo** (pressao + eventos recentes + risco de virar)
-  - **Cenarios Principais** (resultado/gols/momento) e 1 driver
-  - (Opcional) **Pergunte ao Copiloto** e clique em 1 pergunta sugerida
-
-### 1:55 -> 2:20 (Prova objetiva)
-- Abra `/prova`.
-  "Aqui a gente prova que nao e interface bonita: tem coleta real, integridade de probabilidade e evolucao de acerto."
-
-### 2:20 -> 2:30 (Fechamento)
-- Volte para `/pitch` fase 3 (ou so aponte o QR na tela final do pitch).
-  "Produto real, prova real. Obrigado."
+- Pitch: `https://copiloto-da-sorte-front-end.vercel.app/pitch`
+- Demo: `https://copiloto-da-sorte-front-end.vercel.app/`
+- Prova objetiva: `https://copiloto-da-sorte-front-end.vercel.app/prova`
+- Vídeo de apoio: `https://youtu.be/-HZcN4PAiuU`
 
 ---
 
-## Plano B (se a demo travar / API instavel)
+## 2. Demo principal (90 segundos)
 
-### B1) Mostrar prova objetiva primeiro (mais confiavel)
-- Va direto para `LINK_VERCEL/prova`.
-- Mostre os 3 blocos principais e feche com:
-  "A experiencia de jogo e a UI; a prova mostra que a logica existe e e auditavel."
+### 0:00 -> 0:20 | Pitch dentro do sistema
+- Abrir `/pitch`.
+- Fala sugerida:
+  "No ao vivo, sobra dado e falta clareza. O Copiloto da Sorte organiza esse caos em leitura clara."
 
-### B2) Video curto (30-60s)
-- Tenha um video local ou link (Drive) com o fluxo:
-  lista -> jogo -> janela -> campo -> pergunta -> prova
-- Cole aqui: `LINK_VIDEO`
+### 0:20 -> 0:35 | Posicionamento
+- Avançar para a segunda etapa.
+- Fala sugerida:
+  "Não é chat, não é painel, não é palpite. É leitura explicável que acompanha a mudança de cenário."
 
-### B3) Fallback visual (se sem live)
-- Abra a home e selecione um jogo de vitrine/recorte disponivel.
-- Mostre as mesmas secoes (mesmo que pre-jogo) e finalize em `/prova`.
+### 0:35 -> 1:05 | Entrar no produto
+- Clicar em **Ir para demo**.
+- Mostrar rapidamente a listagem de jogos e dois cards.
+- Fala sugerida:
+  "A lista já ajuda a priorizar o que vale acompanhar. Antes de abrir a partida, o usuário já recebe sinal de contexto."
+
+### 1:05 -> 1:45 | Abrir uma partida
+- Entrar em um jogo ao vivo.
+- Mostrar, nessa ordem:
+  - leitura do topo;
+  - janela temporal;
+  - campo premium ao vivo;
+  - cenários principais.
+- Fala sugerida:
+  "Quando abrimos a partida, o produto não mostra só números. Ele mostra leitura atual, cenário provável e o motivo dessa leitura."
+
+### 1:45 -> 2:05 | Pergunte ao Copiloto
+- Mostrar uma pergunta sugerida ou uma pergunta customizada.
+- Fala sugerida:
+  "As perguntas também acompanham o contexto do jogo. Elas não são genéricas."
+
+### 2:05 -> 2:30 | Prova objetiva
+- Abrir `/prova`.
+- Fala sugerida:
+  "E como isso não poderia ser só interface bonita, aqui está a prova objetiva: coleta real, consistência e auditoria."
 
 ---
 
-## Checklist de palco
-- Rede ok
-- Link abre no modo anonimo
-- `/pitch` com atalhos funcionando
-- `/prova` carrega
-- Plano B pronto (video aberto, offline se possivel)
+## 3. Plano B
 
+### B1. Se o jogo ao vivo estiver ruim no momento
+- Mostrar a home rapidamente.
+- Escolher a partida com leitura mais clara disponível.
+- Seguir a mesma ordem: topo -> janela -> campo -> cenários -> prova.
+
+### B2. Se houver instabilidade no ambiente
+- Ir direto para `/prova`.
+- Fechar com o vídeo curto de apoio: `https://youtu.be/-HZcN4PAiuU`
+
+### B3. Se a banca pedir uma visão rápida do produto
+- Abrir `/pitch`.
+- Mostrar as três etapas.
+- Entrar no produto.
+- Abrir `/prova`.
+
+---
+
+## 4. Checklist de palco
+
+- `/pitch` abriu corretamente.
+- `/prova` abriu corretamente.
+- O link principal do produto está carregando.
+- O vídeo de apoio está acessível.
+- Existe pelo menos uma partida boa para demo.
+- O navegador está limpo, em tela cheia e sem abas desnecessárias.
