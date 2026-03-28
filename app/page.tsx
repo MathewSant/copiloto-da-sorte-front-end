@@ -485,16 +485,16 @@ function CopilotPageContent() {
 
       {selectedMatch && (
         <Drawer open={isContextDrawerOpen} onOpenChange={setIsContextDrawerOpen} handleOnly>
-          <DrawerContent className="max-h-[85svh] overflow-hidden border-t border-border bg-navy-deep p-0">
+          <DrawerContent className="h-[85svh] max-h-[85svh] min-h-0 overflow-hidden border-t border-border bg-navy-deep p-0">
             <DrawerHeader className="sr-only">
               <DrawerTitle>Contexto e ações</DrawerTitle>
               <DrawerDescription>
                 Contexto complementar, mercados relacionados e pontos de monitoramento da partida selecionada.
               </DrawerDescription>
             </DrawerHeader>
-            <div className="min-h-0 flex-1 overflow-hidden">
+            <div className="flex h-full min-h-0 flex-1 overflow-hidden">
               <ContextSidebar
-                className="h-full w-full border-l-0"
+                className="flex h-full min-h-0 w-full border-l-0"
                 match={selectedMatch}
                 livePulse={detailForSelection?.livePulse}
                 scenarios={detailForSelection?.scenarios ?? []}
