@@ -368,7 +368,7 @@ export function ContextSidebar({
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto overscroll-contain">
+      <div className="flex-1 overflow-y-auto overscroll-contain touch-pan-y">
         {/* Related Markets */}
         <div className="p-4 border-b border-border">
           <div className="mb-4 rounded-lg border border-primary/25 bg-primary/10 p-3">

@@ -484,8 +484,8 @@ function CopilotPageContent() {
       </Sheet>
 
       {selectedMatch && (
-        <Drawer open={isContextDrawerOpen} onOpenChange={setIsContextDrawerOpen}>
-          <DrawerContent className="max-h-[85svh] border-t border-border bg-navy-deep p-0">
+        <Drawer open={isContextDrawerOpen} onOpenChange={setIsContextDrawerOpen} handleOnly>
+          <DrawerContent className="max-h-[85svh] overflow-hidden border-t border-border bg-navy-deep p-0">
             <DrawerHeader className="sr-only">
               <DrawerTitle>Contexto e ações</DrawerTitle>
               <DrawerDescription>
